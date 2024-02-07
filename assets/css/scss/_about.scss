@@ -1,0 +1,226 @@
+#about {
+    padding: 96px 24px;
+    border-bottom: 1px solid #12192b;
+    .grid-layout {
+        .about-start {
+            display: flex;
+            align-items: flex-start;
+            gap: 116px;
+            flex-direction: row;
+            .cardme {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                border: 2px solid #12192b;
+                width: 342px;
+                height: 587px;
+                padding: 20px;
+                border-radius: 24px;
+                transition: border 1s ease;
+                .names {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 34px;
+
+                    h5 {
+                        color: #f7f9fc;
+                        font-family: Inter;
+                        font-size: 38px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 147.023%; /* 55.869px */
+                    }
+
+                    p {
+                        text-align: right;
+                        font-family: Inter;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 147.023%; /* 26.464px */
+                        background: linear-gradient(90deg, #4271eb 0%, #6bbaff 109.72%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                .me {
+                    width: 262px;
+                    height: 263px;
+                    border-radius: 24px;
+                }
+
+                .email_city {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .email {
+                        color: #7c7d80;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 147.023%; /* 23.524px */
+                    }
+
+                    .city {
+                        color: #7c7d80;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 147.023%; /* 29.405px */
+                    }
+                }
+
+                .social-media {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    .github {
+                        display: flex;
+                        padding: 15px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 50px;
+                        border: 2.39px solid #12192b;
+                        cursor: pointer;
+                        transition: 1s ease;
+                    }
+
+                    .linkedin {
+                        display: flex;
+                        padding: 15px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 50px;
+                        border: 2.39px solid #12192b;
+                        cursor: pointer;
+                        transition: 1s ease;
+                    }
+
+                    .github:hover {
+                        border-color: #4271eb;
+
+                        svg path {
+                            stroke: #4271eb;
+                        }
+                    }
+
+                    .linkedin:hover {
+                        border-color: #4271eb;
+
+                        svg path {
+                            stroke: #4271eb;
+                        }
+                    }
+                }
+            }
+
+            .cardme:hover {
+                border-color: #4271eb;
+            }
+
+            .about-history {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .title-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+
+                    .about-subtext {
+                        display: inline-flex;
+                        height: 36px;
+                        padding: 0px 20px;
+                        align-items: center;
+                        gap: 13px;
+                        border-radius: 24px;
+                        border: 1px solid #12192b;
+                        width: 116px;
+                        img {
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        .about-subtitle {
+                            color: #f7f9fc;
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 147.023%; /* 23.524px */
+                        }
+                    }
+
+                    .about-title {
+                        color: #f7f9fc;
+                        font-family: Inter;
+                        font-size: 60px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                        padding-bottom: 40px;
+
+                        .gradiente {
+                            background: linear-gradient(90deg, #4271eb 22.36%, #6bbaff 72.18%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+
+                .about-text {
+                    color: #7c7d80;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%; /* 25.6px */
+                }
+            }
+        }
+    }
+}
+
+// Responsividade
+@include responsive(m) {
+    #about {
+        padding: 50px 24px;
+        .grid-layout {
+            .about-start {
+                flex-direction: column;
+                align-items: center;
+
+                .about-history {
+                    align-items: flex-start;
+                    .title-text {
+                        .about-title {
+                            font-size: 32px;
+                        }
+
+                        .about-text {
+                            width: 100%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

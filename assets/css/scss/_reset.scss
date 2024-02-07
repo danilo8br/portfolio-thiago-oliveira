@@ -1,0 +1,60 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+    ::selection {
+      background-color: #6BBAFF;
+      color: #fff;
+    }
+    ul,
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    img, svg {
+      display: block;
+      width: 100%;
+    }
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+    button,
+    input {
+      border: 0;
+      &:focus {
+        border: 0;
+      }
+    }
+  
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: #030917;
+      position: relative;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: 62.5%;
+    }
+  
+  ::-webkit-scrollbar {
+      width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+      background-color: #030917;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: #12192B;
+      
+  }
