@@ -1,0 +1,44 @@
+footer {
+   
+    .grid-layout {
+        padding: 30px;
+        .footer-spacebet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+
+            h4 {
+                color: #7C7D80;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-align: center;
+
+            }
+
+            h6 {
+                color: #555658;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                a {
+                    color: #555658;
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
+

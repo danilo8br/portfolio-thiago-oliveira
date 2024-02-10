@@ -1,3 +1,4 @@
+// Estilo da section home
 #home {
     padding: 96px 24px;
     border-bottom: 1px solid #12192b;
@@ -15,14 +16,14 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                background: linear-gradient(90deg, #4271eb 0%, #6bbaff 109.72%);
+                background: $gradient-1;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
 
             .title-text-home {
-                color: #f7f9fc;
+                color: $white-dark;
                 font-family: Inter;
                 font-size: 80px;
                 font-style: normal;
@@ -31,7 +32,7 @@
             }
 
             .sub-text-home {
-                color: #7c7d80;
+                color: $gray-5;
                 text-align: center;
                 font-family: Inter;
                 font-size: 18px;
@@ -47,120 +48,13 @@
             align-items: center;
             justify-content: center;
             padding-bottom: 150px;
-            .circuit {
-                stroke-dasharray: 100;
-                stroke-dashoffset: 400;
-                animation: dash 3s infinite;
-                stroke: #19fa9a;
-            }
-
-            @keyframes dash {
-                to {
-                    stroke-dashoffset: 5;
-                }
-            }
-
-            #Rectangle986 {
-                animation: growAnimation 5s infinite;
-                transform-origin: left;
-                fill: #19fa9a;
-            }
-
-            #Rectangle987 {
-                animation: growAnimation 6s infinite;
-                transform-origin: left;
-                fill: #4271eb;
-            }
-
-            #Rectangle988 {
-                animation: growAnimation 9s infinite;
-                transform-origin: left;
-                fill: #8c82ff;
-            }
-
-            #Ellipse305_2 {
-                animation: floatAnimation 3s ease-in-out infinite alternate;
-            }
-
-            #Ellipse306 {
-                animation: floatAnimation2 4s ease-in-out infinite alternate;
-            }
-
-            #Ellipse307 {
-                animation: floatAnimation3 6s ease-in-out infinite alternate;
-            }
-
-            @keyframes floatAnimation {
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-                50% {
-                    transform: translateY(-60px); /* Altere a quantidade de flutuação ajustando o valor translateY */
-                }
-            }
-
-            @keyframes floatAnimation2 {
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-                50% {
-                    transform: translateY(-70px); /* Altere a quantidade de flutuação ajustando o valor translateY */
-                }
-            }
-
-            @keyframes floatAnimation3 {
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-                50% {
-                    transform: translateY(-50px); /* Altere a quantidade de flutuação ajustando o valor translateY */
-                }
-            }
-
-            @keyframes growAnimation {
-                0% {
-                    width: 10px;
-                }
-                50% {
-                    width: 60px; /* Largura máxima desejada durante o crescimento */
-                }
-                100% {
-                    width: 10px;
-                }
-            }
-
-            @keyframes growAnimation2 {
-                0% {
-                    width: 50px;
-                }
-                50% {
-                    width: 100px; /* Largura máxima desejada durante o crescimento */
-                }
-                100% {
-                    width: 50px;
-                }
-            }
-
-            @keyframes growAnimation3 {
-                0% {
-                    width: 20px;
-                }
-                50% {
-                    width: 90px; /* Largura máxima desejada durante o crescimento */
-                }
-                100% {
-                    width: 40px;
-                }
-            }
+            
         }
     }
 }
 
 // Responsividade
-@include responsive(l) {
+@include responsive(m) {
     #home {
         padding: 50px 20px;
         .grid-layout {
@@ -171,6 +65,10 @@
                 .sub-text-home {
                     width: 320.52px;
                 }
+            }
+
+            .terminal {
+                padding-bottom: 0px;
             }
         }
     }

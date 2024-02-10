@@ -1,52 +1,163 @@
+// Estilo da section home
 #experiences {
     padding: 96px 24px;
     border-bottom: 1px solid #12192b;
 
     .grid-layout {
-        .experiences-subtext {
+        .experiences-tile-sub {
             display: flex;
-            height: 36px;
-            padding: 0px 20px;
-            align-items: center;
+            flex-direction: column;
             gap: 28px;
-            border-radius: 24px;
-            border: 1px solid #12192b;
-            width: 167px;
-            img {
-                width: 18px;
-                height: 18px;
+            .experiences-subtext {
+                display: flex;
+                height: 36px;
+                padding: 0px 20px;
+                align-items: center;
+                border-radius: 24px;
+                gap: 14px;
+                border: 1px solid #12192b;
+                width: 167px;
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .experiences-subtitle {
+                    @include sub-title;
+                }
             }
 
-            .experiences-subtitle {
-                color: #f7f9fc;
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 147.023%; /* 23.524px */
-            }
-        }
-
-        .title-subtext {
-            color: #F7F9FC;
-            font-family: Inter;
-            font-size: 60px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal; 
-            padding-bottom: 40px;
-
-            .gradiente {
-                background: linear-gradient(90deg, #4271eb 22.36%, #6bbaff 72.18%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
+            .title-subtext {
+                @include title-section;
+                .gradiente {
+                    @include gradiente;
+                }
             }
         }
 
-        
+        .experiences_start {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .data_line {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 29px;
+                height: 164px;
+                width: 344px;
+                border-right: 1px solid #12192B;
+                .experiences_data_line {
+                    color: #f7f9fc;
+                    font-family: "Inter";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    .gradiente {
+                        @include gradiente;
+                    }
+                }
+
+                .line {
+                    width: 212px;
+                    height: 1px;
+                    background: #12192b;
+                    
+                }
+            }
+
+            .text-tech {
+                display: flex;
+                
+                align-items: center;
+
+                .midle-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+
+                    .text-tech-title {
+                        color: #F7F9FC;
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    .text-tech-subtitle {
+                        color: #7C7D80;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+
+                
+            }
+
+            .final-tech {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 10px;
+                width: 280px;
+                
+                
+                .tech {
+                    color: #4271EB;
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    border-radius: 20px;
+                    display: flex;
+                    padding: 10px;
+                    height: 26px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background: rgba(66, 113, 235, 0.10);                }
+            }
+        }
+    }
+}
+
+// Responsividade
+@include responsive(m) {
+    #experiences {
+        padding: 50px 24px;
+        .grid-layout {
+            .experiences-tile-sub {
+                .title-subtext {
+                    font-size: 32px;
+                }
+            }
+
+            .experiences_start {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+                padding-bottom: 40px;
+                .data_line {
+                    border-right: none;
+                    width: 100%;
+                    height: 0px;
+                    .line {
+                        display: none;
+                    }
+                }
+
+                .final-tech {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

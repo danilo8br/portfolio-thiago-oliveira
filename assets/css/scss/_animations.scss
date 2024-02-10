@@ -1,0 +1,178 @@
+.circle-tech {
+  position: absolute;
+  right: 0;
+  top: 170px;
+  width: 876px;
+  height: 450px;
+}
+
+.circle1_tech {
+  animation: circles-tech 1s ease 1s infinite alternate;
+  transform-box: fill-box;
+  opacity: 0.6;
+  transform-origin: center center;
+}
+
+.circle2_tech {
+  animation: circles-tech 1s ease 0.5s infinite alternate;
+  transform-box: fill-box;
+  opacity: 0.5;
+  transform-origin: center center;
+}
+
+.circle3_tech {
+  animation: circles-tech 1s ease 0s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+
+@keyframes circles-tech {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
+.cube {
+  animation: spinClockwise 6s linear infinite ease-in-out;
+}
+
+@keyframes spinClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circuit {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 400;
+  animation: dash 3s infinite;
+  stroke: #19fa9a;
+}
+
+@keyframes dash {
+  to {
+      stroke-dashoffset: 5;
+  }
+}
+
+#Rectangle986 {
+  animation: growAnimation 5s infinite;
+  transform-origin: left;
+  fill: #19fa9a;
+}
+
+#Rectangle987 {
+  animation: growAnimation 6s infinite;
+  transform-origin: left;
+  fill: #4271eb;
+}
+
+#Rectangle988 {
+  animation: growAnimation 9s infinite;
+  transform-origin: left;
+  fill: #8c82ff;
+}
+
+#Ellipse305_2 {
+  animation: floatAnimation 3s ease-in-out infinite alternate;
+}
+
+#Ellipse306 {
+  animation: floatAnimation2 4s ease-in-out infinite alternate;
+}
+
+#Ellipse307 {
+  animation: floatAnimation3 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-60px); /* Altere a quantidade de flutuação ajustando o valor translateY */
+  }
+}
+
+@keyframes floatAnimation2 {
+  0%,
+  100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-70px); /* Altere a quantidade de flutuação ajustando o valor translateY */
+  }
+}
+
+@keyframes floatAnimation3 {
+  0%,
+  100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px); /* Altere a quantidade de flutuação ajustando o valor translateY */
+  }
+}
+
+@keyframes growAnimation {
+  0% {
+      width: 10px;
+  }
+  50% {
+      width: 60px; /* Largura máxima desejada durante o crescimento */
+  }
+  100% {
+      width: 10px;
+  }
+}
+
+@keyframes growAnimation2 {
+  0% {
+      width: 50px;
+  }
+  50% {
+      width: 100px; /* Largura máxima desejada durante o crescimento */
+  }
+  100% {
+      width: 50px;
+  }
+}
+
+@keyframes growAnimation3 {
+  0% {
+      width: 20px;
+  }
+  50% {
+      width: 90px; /* Largura máxima desejada durante o crescimento */
+  }
+  100% {
+      width: 40px;
+  }
+}
+
+#right-face, #Ellipse276 {
+  animation-duration: 6s; // Aumentei a duração para que o movimento de ida e volta tenha 2s cada
+  animation-iteration-count: infinite;
+  animation-name: moveRightAndLeft;
+}
+
+@keyframes moveRightAndLeft {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}

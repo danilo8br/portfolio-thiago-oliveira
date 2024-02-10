@@ -1,0 +1,105 @@
+// Estilo da section habilidades
+#skills {
+    padding: 96px 24px 192px 24px;
+    border-bottom: 1px solid #12192b;
+
+    .grid-layout {
+        .skills-title-sub {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            .skills-subtext {
+                display: flex;
+                height: 36px;
+                padding: 0px 20px;
+                align-items: center;
+                border-radius: 24px;
+                gap: 14px;
+                border: 1px solid #12192b;
+                width: 160px;
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .skills-subtitle {
+                    @include sub-title;
+                }
+            }
+
+            .title-subtext {
+                @include title-section;
+
+                .gradiente {
+                    @include gradiente;
+                }
+            }
+        }
+
+        .skills-about {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            padding-bottom: 40px;
+
+            .skill-about-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 14px;
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .skill-01 {
+                    color: #f7f9fc;
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 147.023%; /* 20.583px */
+                }
+            }
+        }
+
+        .grid-text {
+            color: #7C7D80;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 25.6px */
+            width: 436px;
+        }
+        
+    }
+}
+
+// Responsividade
+@include responsive(m) {
+    #skills {
+        padding: 50px 24px;
+        .grid-layout {
+            .skills-title-sub {
+                .title-subtext {
+                    font-size: 32px;
+                }
+            }
+
+            .circle-tech {
+                display: none;
+            }
+
+            .grid-text {
+                width: 100%;
+            }
+        }
+
+        
+    }
+}

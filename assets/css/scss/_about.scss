@@ -1,13 +1,14 @@
+// Estilo da section about
 #about {
     padding: 96px 24px;
     border-bottom: 1px solid #12192b;
     .grid-layout {
-        .about-start {
+        .start-about {
             display: flex;
             align-items: flex-start;
             gap: 116px;
             flex-direction: row;
-            .cardme {
+            .cardme-about {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -19,7 +20,7 @@
                 padding: 20px;
                 border-radius: 24px;
                 transition: border 1s ease;
-                .names {
+                .names-about {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -48,19 +49,19 @@
                     }
                 }
 
-                .me {
+                .me-about {
                     width: 262px;
                     height: 263px;
                     border-radius: 24px;
                 }
 
-                .email_city {
+                .email_city-about {
                     display: flex;
                     align-items: center;
                     flex-direction: column;
                     gap: 10px;
 
-                    .email {
+                    .email-about {
                         color: #7c7d80;
                         font-family: Inter;
                         font-size: 16px;
@@ -69,7 +70,7 @@
                         line-height: 147.023%; /* 23.524px */
                     }
 
-                    .city {
+                    .city-about {
                         color: #7c7d80;
                         font-family: Inter;
                         font-size: 20px;
@@ -125,7 +126,7 @@
                 }
             }
 
-            .cardme:hover {
+            .cardme-about:hover {
                 border-color: #4271eb;
             }
 
@@ -155,43 +156,20 @@
                         }
 
                         .about-subtitle {
-                            color: #f7f9fc;
-                            font-family: Inter;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 147.023%; /* 23.524px */
+                            @include sub-title;
                         }
                     }
 
                     .about-title {
-                        color: #f7f9fc;
-                        font-family: Inter;
-                        font-size: 60px;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: normal;
-                        padding-bottom: 40px;
-
+                        @include title-section;
                         .gradiente {
-                            background: linear-gradient(90deg, #4271eb 22.36%, #6bbaff 72.18%);
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
+                            @include gradiente;
                         }
                     }
                 }
 
                 .about-text {
-                    color: #7c7d80;
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 160%; /* 25.6px */
+                    @include text-section;
                 }
             }
         }
@@ -203,9 +181,14 @@
     #about {
         padding: 50px 24px;
         .grid-layout {
-            .about-start {
+            .start-about {
                 flex-direction: column;
                 align-items: center;
+                gap: 40px;
+
+                .cardme-about {
+                    width: 100%;
+                }
 
                 .about-history {
                     align-items: flex-start;

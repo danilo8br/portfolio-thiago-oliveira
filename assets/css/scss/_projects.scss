@@ -1,0 +1,122 @@
+#projects {
+    padding: 96px 24px;
+    border-bottom: 1px solid #12192b;
+
+    .grid-layout {
+        .projects-title-sub {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            .projects-subtext {
+                display: flex;
+                height: 36px;
+                padding: 0px 20px;
+                align-items: center;
+                border-radius: 24px;
+                gap: 14px;
+                border: 1px solid #12192b;
+                width: 134px;
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .projects-subtitle {
+                    @include sub-title;
+                }
+            }
+            
+            .projects-title-subtext {
+                @include title-section;
+
+                .gradiente {
+                    @include gradiente;
+                }
+            }
+        }
+
+        .projects-cards {
+            display: flex;
+            justify-content: space-between;    
+            flex-wrap: wrap;        
+            gap: 25px;
+
+            .cards {
+                display: flex;
+                width: 343px;
+                padding: 30px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 22px;
+                border-radius: 24px;
+                border: 1px solid #12192B;
+                img {
+                    width: 50.108px;
+                    height: 50.108px;
+                }
+
+                .cards-title {
+                    color: #F7F9FC;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .cards-text {
+                    color: #7C7D80;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%; /* 25.6px */
+                }
+
+                .cards-link {
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 160%; /* 25.6px */
+                    background: linear-gradient(90deg, #4271EB 0.08%, #6BBAFF 100.97%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive(l) {
+    #projects {
+        .grid-layout {
+            .projects-cards {
+                
+                .cards {
+                    flex-basis: calc(100%);
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive(m) {
+    #projects {
+        padding: 50px 24px;
+        .grid-layout {
+            .projects-title-sub {
+                .projects-title-subtext {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
